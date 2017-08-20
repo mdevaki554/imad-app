@@ -4,9 +4,9 @@ var path = require('path');
 
 var app = express();
 var articleOne = {
-  title: 'Article One | Manikanta Gupta'
-  heading: `<h1>Article One</h1>`
-  date: 'Sep 21, 2017'
+  title: 'Article One | Manikanta Gupta',
+  heading: '<h1>Article One</h1>',
+  date: 'Sep 21, 2017',
   content: `
             <div>
 				<p> 
@@ -58,6 +58,7 @@ funtions createTemplate(data){
     </html>`;
     return htmlTemplate; 
 }
+
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
