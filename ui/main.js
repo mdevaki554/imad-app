@@ -1,7 +1,9 @@
 console.log('Loaded!');
 var mainText = document.getElementById("main-text");
 mainText.innerHTML = 'New Value';
-var madi = document.getElementById('madi');
-madi.onClick = function() {
-madi.style.marginLeft = '500px';
+
+//Move the img
+var img = document.getElementById("madi");
+img.onClick = function() {
+img.style.marginLeft = '500px';
 };
