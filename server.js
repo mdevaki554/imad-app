@@ -5,64 +5,34 @@ var path = require('path');
 var app = express();
 
 var articles = {
-    articleOne : {
+    'article-one' : {
       title: 'Article One | Manikanta Gupta',
       heading: '<h1>Article One</h1>',
-      date: 'Sep 21, 2017',
+      date: 'Sep 10, 2015',
       content: `
                 <div>
     				<p> 
-    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-    				</p>
-    			</div>
-    			<div>
-    				<p> 
-    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-    				</p>
-    			</div>
-    			<div>
-    				<p> 
-    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-    				</p>
-    			</div>`
+    					This is the content for my first Article. 
+    				</p>`
     },
-    articleTwo : {
+    'article-two' : {
       title: 'Article Two | Manikanta Gupta',
       heading: '<h1>Article Two</h1>',
-      date: 'Sep 21, 2017',
+      date: 'Sep 21, 2016',
       content: `
                 <p> 
-        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
-        			</p>
-        		</div>
-        		<div>
-        			<p> 
-        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
-        			</p>
-        		</div>
-        		<div>
-        			<p> 
-        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
+        				This is the content for my Second Article. 
         			</p>`
     },
-    articleThree : {
+    'article-three' : {
     title: 'Article Two | Manikanta Gupta',
       heading: '<h1>Article Two</h1>',
-      date: 'Sep 21, 2017',
+      date: 'Sep 20, 2017',
       content: 
                 `<p> 
-    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. 
-    			</p>
-    		</div>
-    		<div>
-    			<p> 
-    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article.
-    			</p>
-    		</div>
-    		<div>
-    			<p> 
-    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. 
+    				This is the content for my Third Article.  
     			</p>`
+    		
     }
 };
 
@@ -106,9 +76,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req, res) {
+app.get('/:articleName', function(req, res) {
     
-    res.send(createTemplate(articleOne)); 
+    res.send(createTemplate(articles[articleName])); 
 });
 
 app.get('/article-two', function(req, res) {
