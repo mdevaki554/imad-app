@@ -4,26 +4,66 @@ var path = require('path');
 
 var app = express();
 
-var articleOne = {
-  title: 'Article One | Manikanta Gupta',
-  heading: '<h1>Article One</h1>',
-  date: 'Sep 21, 2017',
-  content: `
-            <div>
-				<p> 
-					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-				</p>
-			</div>
-			<div>
-				<p> 
-					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-				</p>
-			</div>
-			<div>
-				<p> 
-					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
-				</p>
-			</div>`
+var articles = {
+    articleOne : {
+      title: 'Article One | Manikanta Gupta',
+      heading: '<h1>Article One</h1>',
+      date: 'Sep 21, 2017',
+      content: `
+                <div>
+    				<p> 
+    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
+    				</p>
+    			</div>
+    			<div>
+    				<p> 
+    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
+    				</p>
+    			</div>
+    			<div>
+    				<p> 
+    					This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. This is the content for my first Article. 
+    				</p>
+    			</div>`
+    },
+    articleTwo : {
+      title: 'Article Two | Manikanta Gupta',
+      heading: '<h1>Article Two</h1>',
+      date: 'Sep 21, 2017',
+      content: `
+                <p> 
+        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
+        			</p>
+        		</div>
+        		<div>
+        			<p> 
+        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
+        			</p>
+        		</div>
+        		<div>
+        			<p> 
+        				This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. This is the content for my Second Article. 
+        			</p>`
+    },
+    articleThree = {
+    title: 'Article Two | Manikanta Gupta',
+      heading: '<h1>Article Two</h1>',
+      date: 'Sep 21, 2017',
+      content: 
+                `<p> 
+    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. 
+    			</p>
+    		</div>
+    		<div>
+    			<p> 
+    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article.
+    			</p>
+    		</div>
+    		<div>
+    			<p> 
+    				This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. This is the content for my Third Article. 
+    			</p>`
+    }
 };
 
 function createTemplate(data){
