@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
+
 var articleOne = {
   title: 'Article One | Manikanta Gupta',
   heading: '<h1>Article One</h1>',
@@ -27,7 +28,7 @@ var articleOne = {
 
 funtions createTemplate(data){
     var title = data.title;
-    var date = data.date
+    var date = data.date;
     var heading = data.heading
     var content = data.content;
     var htmlTemplate = `<html>
