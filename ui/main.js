@@ -7,3 +7,5 @@ var img = document.getElementById("madi");
 img.onClick = function() {
 img.style.marginLeft = '500px';
 };
+console.log(img);
+console.log(img.onClick);
