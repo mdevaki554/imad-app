@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 var articleOne = {
   title: 'Article One | Manikanta Gupta'
-  heading: '<h1>Article One</h1>'
+  heading: `<h1>Article One</h1>`
   date: 'Sep 21, 2017'
   content: `
             <div>
