@@ -1,11 +1,11 @@
-console.log('Loaded!');
-var mainText = document.getElementById("main-text");
-mainText.innerHTML = 'New Value';
-
-//Move the img
-var img = document.getElementById("madi");
-img.onClick = function() {
-img.style.marginLeft = '500px';
+//Counter Example
+var counter_button = document.getElementById('counter')
+counter_button.onClick = function( ){
+  //Making req to End point '/Counter'
+  
+  //capturing th output from the end point
+  
+  //rendering the output on count 
+  var span_count = document.getElementById('count');
+  span_count.innerHTML = counter.toString();
 };
-console.log(img);
-console.log(img.onClick);
