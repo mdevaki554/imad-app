@@ -2,7 +2,7 @@
 var counter_button = document.getElementById('counter');
 
 counter_button.onclick = function(){
-  //Making req to End point '/Counter'
+  //Create req to End point '/Counter'
   var request = new XMLHttpRequest();
   
   //capturing th output from the end point
@@ -15,6 +15,11 @@ counter_button.onclick = function(){
         }
     }
   };
+  
+  //Make a req
+  request.open('GET', 'http://manikantagupta554.imad.hasura-app.io/counter', true);
+  request.send(null);
+  
 };
   
 
