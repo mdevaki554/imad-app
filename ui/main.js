@@ -1,7 +1,7 @@
 //Counter Example
 var counter_button = document.getElementById('counter');
 var counter = 0;
-counter_button.onClick = function( ){
+counter_button.onclick = function( ){
   //Making req to End point '/Counter'
   
   //capturing th output from the end point
